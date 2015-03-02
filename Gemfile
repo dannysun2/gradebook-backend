@@ -41,3 +41,7 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'rails_admin'
+gem 'active_model_serializers'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'rails_12factor'

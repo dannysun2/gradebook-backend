@@ -3,6 +3,7 @@ class Api::ClassroomsController < ApplicationController
       render json: Classroom.all
    end
 #
-#    def show
-#       render json: Classroom.find params[:id]
+def show
+   render json: Classroom.find_by(id: params[:id])
+end
    end

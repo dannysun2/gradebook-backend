@@ -4,7 +4,11 @@ class Api::ClassroomsController < ApplicationController
    end
 #
    def show
-      render json: Classroom.find_by(id: params[:id])
+      render json: ClassroomStudent.where(classroom_id: params[:id])
+   end
+
+   def students
+
    end
 
    def create
@@ -15,5 +19,5 @@ class Api::ClassroomsController < ApplicationController
          redirect_to root_path
       end
    end
-   
+
 end

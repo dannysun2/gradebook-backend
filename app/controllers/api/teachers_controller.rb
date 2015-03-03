@@ -4,5 +4,6 @@ class Api::TeachersController < ApplicationController
    end
 
    def show
+      render json: Teacher.find params[:id]
    end
 end

@@ -5,5 +5,4 @@ class Api::ClassroomsController < ApplicationController
 #
 #    def show
 #       render json: Classroom.find params[:id]
-#    end
-# end
+   end

@@ -43,5 +43,5 @@ end
 
 gem 'rails_admin'
 gem 'active_model_serializers'
-gem 'rack-cors', :require => 'rack/cors'
+gem 'rack-cors'
 gem 'rails_12factor'

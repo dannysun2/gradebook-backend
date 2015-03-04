@@ -4,7 +4,7 @@ class Api::ClassroomsController < ApplicationController
    end
 #
    def show
-      render json: Classroom.where(classroom_id: params[:id])
+      render json: Classroom.find params[:id]
    end
 
    def students

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :teachers
       resources :classrooms
       resources :students
+      resources :assignments
    end
 
    # resources :classrooms

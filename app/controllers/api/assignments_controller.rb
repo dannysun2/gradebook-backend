@@ -4,7 +4,7 @@ class Api::AssignmentsController < ApplicationController
    end
 
    def show
-      render json: Assignment.find(params[:id])
+      render json: Assignment.where(assignment_type: params[:id])
    end
 
    def create

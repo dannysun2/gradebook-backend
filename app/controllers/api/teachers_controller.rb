@@ -8,6 +8,6 @@ class Api::TeachersController < ApplicationController
    end
 
    def create
-      render json: Teacher.create!(firstname: params[:teacher][:firstname], lastname: params[:teacher][:lastname], phone: params[:teacher][:phone])
+      render json: Teacher.create!(firstname: params[:teacher][:firstname], lastname: params[:teacher][:lastname])
    end
 end

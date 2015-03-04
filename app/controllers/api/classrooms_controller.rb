@@ -1,6 +1,6 @@
 class Api::ClassroomsController < ApplicationController
    def index
-      render json: Classroom.all
+      render json: ClassroomStudent.all
    end
 #
    def show

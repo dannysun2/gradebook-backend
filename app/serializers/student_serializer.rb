@@ -1,3 +1,3 @@
 class StudentSerializer < ActiveModel::Serializer
-  attributes :id, :classrooms
+  attributes :firstname, :lastname, :id, :classrooms
 end

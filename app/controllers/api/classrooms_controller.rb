@@ -1,10 +1,10 @@
 class Api::ClassroomsController < ApplicationController
    def index
-      render json: ClassroomStudent.all
+      render json: Classroom.all
    end
 #
    def show
-      render json: ClassroomStudent.where(classroom_id: params[:id])
+      render json: Classroom.where(classroom_id: params[:id])
    end
 
    def students

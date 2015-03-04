@@ -8,7 +8,6 @@ class Api::TeachersController < ApplicationController
    end
 
    def create
-      @teacher = Teacher.new params.require(:teacher).permit(:firstname, :lastname)
-      @teacher.save
+      render json: Teacher.create!(firstname: params[:teacher][:firstname], lastname: params[:teacher][:lastname])
    end
 end

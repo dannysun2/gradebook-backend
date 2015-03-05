@@ -8,7 +8,7 @@ def show
 end
 
 def create
-   render json: Student.create!(firstname: params[:teacher][:firstname], lastname: params[:teacher][:lastname])
+   render json: Student.create!(firstname: params[:student][:firstname], lastname: params[:student][:lastname])
 end
 
 end

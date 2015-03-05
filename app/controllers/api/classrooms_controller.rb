@@ -8,6 +8,7 @@ class Api::ClassroomsController < ApplicationController
    end
 
    def create
+      render json: Classroom.create!(name: params[:classroom][:name])
    end
 
 end

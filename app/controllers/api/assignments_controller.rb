@@ -11,4 +11,9 @@ class Api::AssignmentsController < ApplicationController
       render json: Assignment.create!(name: params[:assignment][:name], student_id: params[:assignment][:student_id], classroom_id: params[:assignment][:classroom_id], assignment_type: params[:assignment][:assignment_type], grade: params[:assignment][:assignment_type])
    end
 
+   def update
+      @student.update params.require(:assignment).permit(:name, :student_id, :classroom_id, :assignment_type, :grade)
+      @student.save
+   end
+
 end

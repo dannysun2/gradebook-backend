@@ -11,4 +11,9 @@ def create
    render json: Student.create!(firstname: params[:student][:firstname], lastname: params[:student][:lastname])
 end
 
+def update
+   @student.update params.require(:student).permit(:firstname, :lastname)
+   @student.save
+end
+
 end

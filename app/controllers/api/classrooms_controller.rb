@@ -11,4 +11,8 @@ class Api::ClassroomsController < ApplicationController
       render json: Classroom.create!(name: params[:classroom][:name])
    end
 
+   def update
+      @classroom.update params.require(:classroom).permit(:name)
+      @classroom.save
+   end
 end

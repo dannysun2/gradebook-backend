@@ -10,4 +10,9 @@ class Api::TeachersController < ApplicationController
    def create
       render json: Teacher.create!(firstname: params[:teacher][:firstname], lastname: params[:teacher][:lastname])
    end
+
+   def update
+      @teacher.update params.require(:teacher).permit(:firstname, :lastname)
+      @teacher.save
+   end
 end

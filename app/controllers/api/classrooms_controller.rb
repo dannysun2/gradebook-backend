@@ -8,7 +8,7 @@ class Api::ClassroomsController < ApplicationController
    end
 
    def create
-      render json: Classroom.create!(name: params[:classroom][:name])
+      render json: Classroom.create!(classroom_id: params[:classroom][:classroom_id], name: params[:classroom][:name])
    end
 
    def update

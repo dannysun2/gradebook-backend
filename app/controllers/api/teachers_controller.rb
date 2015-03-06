@@ -8,7 +8,7 @@ class Api::TeachersController < ApplicationController
    end
 
    def create
-      render json: Teacher.create!(firstname: params[:teacher][:firstname], lastname: params[:teacher][:lastname])
+      render json: Teacher.create!(teacher_id: params[:teacher][:teacher_id], firstname: params[:teacher][:firstname], lastname: params[:teacher][:lastname])
    end
 
    def update

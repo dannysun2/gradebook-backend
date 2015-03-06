@@ -12,6 +12,7 @@ class Api::ClassroomsController < ApplicationController
    end
 
    def update
+      @classroom = Classroom.find(params[:id])
       @classroom.update params.require(:classroom).permit(:name)
       @classroom.save
    end

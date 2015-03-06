@@ -12,6 +12,7 @@ class Api::TeachersController < ApplicationController
    end
 
    def update
+      @teacher = Teacher.find(params[:id])
       @teacher.update params.require(:teacher).permit(:firstname, :lastname)
       @teacher.save
    end

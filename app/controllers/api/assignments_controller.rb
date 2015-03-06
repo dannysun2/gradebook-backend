@@ -12,8 +12,9 @@ class Api::AssignmentsController < ApplicationController
    end
 
    def update
-      @student.update params.require(:assignment).permit(:name, :student_id, :classroom_id, :assignment_type, :grade)
-      @student.save
+      @assignment = Assignment.find(params[:id])
+      @assignment.update params.require(:assignment).permit(:name, :student_id, :classroom_id, :assignment_type, :grade)
+      @assignment.save
    end
 
 end

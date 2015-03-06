@@ -12,6 +12,7 @@ def create
 end
 
 def update
+   @student = Student.find(params[:id])
    @student.update params.require(:student).permit(:firstname, :lastname)
    @student.save
 end
